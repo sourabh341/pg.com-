@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetYourPg.com</title>
+    <script src="/javascript.js"></script>
+    <style>
+        *{  font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            width: 100%;
+            min-height: auto;
+            background-color: rgba(128, 128, 128, 0.233);
+            justify-content: space-between;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        nav span{
+            display: flex;
+        }
+        .img{
+            width:60px;
+            padding: 0 12px;
+            margin-left: 2%;
+        }
+        h1{
+            padding: 12px 0;
+            font-size: 32px;
+        }
+        ul {
+           padding: 12px;
+           position: absolute;
+           padding-left: 10em;
+           
+               
+        }
+        li{
+            display: inline-block;
+            padding: 12px; 
+            list-style: none;
+         }
+         ul li a{
+             text-decoration: none;
+             text-transform: uppercase;
+             color: black;
+             border-bottom: 0;
+            }
+            ul li a:hover{
+                border-bottom: 100%;
+                border: 2px solid orangered;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+            } 
+         .menu{
+           display: none;
+         }
+         @media(max-width:700px){
+            span{
+                 display: inline-flex;
+             }
+             .img{
+                width: 60px;
+             }
+             h1{
+                 font-size:2em;
+                 padding-top: 0.5em;
+
+             }
+             .nav-links{
+                position: absolute;
+                background:#e4e4e7;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: center;
+                z-index: 2;
+                transition: 1s;
+                        
+             }
+             .fa{
+                    display: block;
+                    color: #fff;
+                    margin: 10px;
+                    cursor: pointer;
+                    font-size: 22px;
+
+                }
+            .nav-links ul {
+                padding: 30px;
+                margin-top: 20px;
+            }
+            .menu{
+                padding-top: 15px;
+                width: 25px;
+                display: inline;
+            }
+            .colum{overflow: hidden; font-size: 0;}
+            .search-bar .form input{
+             width: 200px;
+             height: 25px;
+             outline: none;
+             border-radius: 2px;
+             border: 1px solid grey;
+             padding: 5px;
+             font-size: 12px;
+         
+         }
+         .search-bar .form button{
+             width: 35px;
+             height: 30px;
+             text-transform: uppercase;
+             border-color: grey;
+             cursor: pointer;
+             padding-left: 0;
+             background-color:rgba(255, 68, 0, 0.939);
+             
+         }
+
+      
+           
+         }
+ /* -----------------search-bar--------------------- */
+         .search-bar{
+             width: 100%;
+             height: 250px;
+             border: 1px solid #e2e8f0;
+             display: flex;
+             justify-content: space-between;
+          
+         }
+         .colum{
+            width: 380px;
+            height: 250px;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+         .search-bar .form { margin: auto;}
+         .search-bar .form input{
+             width: 400px;
+             height: 43px;
+             outline: none;
+             border-radius: 2px;
+             border: 1px solid grey;
+             padding: 5px 15px;
+             font-size: 18px;
+         
+         }
+         .search-bar .form .button{
+             width: 90px;
+             height: 43px;
+             text-transform: uppercase;
+             border-color: grey;
+             cursor: pointer;
+             padding: 0 12px ;
+             background-color:rgba(255, 68, 0, 0.939);
+             
+         }
+ /* ----------------------------------residence-details-------------------------------- */
+       .container{
+            border: 1px solid #e5e5e5;
+            max-width: 100vw;
+            height: auto;
+            margin: 20px;
+            box-shadow: 0 0 10px  0px rgb(0, 0, 0);      
+       } 
+       .row{
+           display: flex;
+       }
+       .res-details{
+           border: 1px solid #e4e4e7;
+           max-width: 380px;
+           min-height: auto;
+           margin: 12PX auto; 
+           box-sizing: border-box;;
+       }
+       .res-details:hover{
+        box-shadow: 0 0 15px  0px rgb(0, 0, 0); 
+       }
+       img{
+           width: 380px;
+       }
+    </style>
+</head>
+<body >
+    <section class="header">
+        <nav>
+            <span><img class="img" src="/image/home.png" alt="homeicon"><h1>GetYourPg.com</h1></span>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/index.html">home</a></li>
+                <li><a href="/member.html">member</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"><img class="menu" src="/image/openmenu.webp" alt=""></i>
+        </nav>
+    </section>
+    
+    <div class="search-bar">
+        <div class="colum">Advertisement...</div>
+
+        <form action="#" class="form">
+            <input type="search" name="input" placeholder="search location" class="input">
+            <input type="submit" name="" class="button" value="submit" onclick="hello()">
+        </form>
+        <div class="colum">Advertisement...</div>
+
+    </div>
+        
+    <!-- /* ----------------------------------residence-details-------------------------------- */ -->
+
+
+    <section class="container">
+            <div class="row">
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/blueroom.jpg" alt="room  image">
+                    </div>
+                    <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9  4000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/goldenroom.jpg" alt="room  image">
+                    </div>
+                    <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 4000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/whiteroom.jpg" alt="room  image">
+                    </div>                    
+                    <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 3000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/whiteroom.jpg" alt="room  image">
+                    </div>                   
+                     <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 3000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/blueroom.jpg" alt="room  image">
+                    </div>                    
+                    <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 2000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/goldenroom.jpg" alt="room  image">
+                    </div>                   
+                     <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 4500</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/blueroom.jpg" alt="room  image">
+                    </div>                   
+                     <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 4000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/whiteroom.jpg" alt="room  image">
+                    </div>                    
+                    <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 2500</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/goldenroom.jpg" alt="room  image">
+                    </div>                   
+                     <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 3500</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/goldenroom.jpg" alt="room  image">
+                    </div>                    
+                    <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 6000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/blueroom.jpg" alt="room  image">
+                    </div>                   
+                     <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 1000</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-details">
+                    <div style=" margin: 0; padding: 0; height: 60%;">
+                        <img src="/image/whiteroom.jpg" alt="room  image">
+                    </div>                    <div style="display:grid; margin: 12px;"> 
+                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
+                        <span style="font-size: 15px;">address  here</span>
+                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="padding: 10px; color: red;">&#x20B9 1200</span>
+                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+    </section> 
+  
+  
+  <script>
+        var navLinks=document.getElementById("navLinks");
+        var ip=document.getElementById
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+        function input(){
+            window.alert("hello");
+        }
+    </script>
+</body>
+</html>
