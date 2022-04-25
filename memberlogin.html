@@ -4,85 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login with GetYourPg.com</title>
+    <title>member login page</title>
     <style>*{
-        font-family: sans-serif;
         padding: 0;
         margin: 0;
     }
-   
-        .registration-form{
+        .header{
             width: 100%;
-            height: 100vh;
-            background-color:#e5e5e5;
-            display: flex;
-            justify-content: center;
-            align-items:  center;
-            background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url(/image/goldenroom.jpg);
-            background-size: cover;
+            min-height: auto;
+            background-color: rgba(128, 128, 128, 0.233);
         }
-       .header{
-           position: absolute;
-           display: flex;
-           margin: 2% 3%;
-       }a
-        {   text-decoration: none;
-            color: black;
+        nav{
             display: flex;
+            justify-content: space-between;
+        }
+        span {display: flex;}
+        .img{
+            width:60px;
+            padding: 0 12px;
+            margin-left: 2%;
+        }
+        h1{
+            padding: 12px 0;
+            font-size: 32px;
+        }
+        ul{
+            padding: 12px;
+             padding-left: 10em;
+             margin: 0 50px;
+        }
+        li{
+            display: inline-block;
+            padding: 12px; 
+            list-style: none;
          }
-       p{
-           font-size: 2em;padding: 0 20px;
+         ul li a{
+             text-decoration: none;
+             text-transform: uppercase;
+             color: black;
+             border-bottom: 0;
+            }
+            ul li a:hover{
+                border-bottom: 100%;
+                border: 2px solid orangered;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+            } 
+
+    @media(max-width:700px){
+        .header{
+            width: 100%;
+            min-height: auto;
+            
+        }
+       nav{
+           display: grid;
+           text-align: left;
        }
-        .container{
-            box-sizing: border-box;
-            border: 1px solid orangered;
-            width: 400px;
-            height: 380px;
-            border-radius: 14px;
-            box-shadow: 0 0 20px  0px rgb(0, 0, 0);
-            background-color: #f1f5f9;
-            opacity: 0.8;
+        span {display: flex;}
+        .img{
+            width:60px;
+            padding: 0 12px;
+            margin-left: 2%;
         }
-        form{
-            display: grid;
-            margin: 15% 5%;
+        h1{
+            padding: 12px 0;
+            font-size: 32px;
+        }
+        ul{  text-align: left;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
         
-        }
-        input{
-            padding: 5px;
-            margin-bottom: 25px;
-            font-size: 18px;
-            outline: none;
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-            color: #1f2937;
-            background: transparent;
-            border-bottom-color:orangered ;
-        }
-        button{
-            padding: 5px 5px;
-            margin: 5% 15%;
-            border-radius: 12px;
-            font-size: 18px;
-            border-color:orangered;
-        }
+     
+    }
+    .container{
+        border: 1px solid black;
+        height: 550px;
+        margin: 100px 100px;
+        box-shadow: 0 0 10px  0px rgb(0, 0, 0);
+        background-image: linear-gradient(rgba(0,0,0.5,0.2),rgba(0,0,0.5,0.6)),url("/image/goldenroom.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .div{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        font-size: 22px;
+        margin: 2% auto;
+        color: aliceblue;
+    }
+    .form-1{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position:relative;
+        width: 100%;
+        height: 60px;
+    }
+    .form-1 .input{
+        border-radius: 20px;
+        width: 320px;
+        height: 32px;
+        padding:  0 12px;
+        margin: 0 12px;
+        outline: none;
+        opacity: 0.6;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-color: orangered;
+    }
+    .form-1 .ip-btn{
+        width: 80px;
+        height: 36px;
+        text-transform: uppercase;
+        padding: 0 12px;
+        border-radius: 20px;
+        border-color: orangered;
+        opacity: 0.6;
+    }
+   
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="/index.html"><p>&#8592</p><h1 style="font-size: 32px;">back</h1></a>
-        
-    </div>
-    <section class="registration-form">
-        <div class="container">
-            <form action="">
-                <input type="text" name="name" id="" placeholder="Username" required>
-                <input type="email" name="email" id="" placeholder="email" required >
-                <button type="submit">login</button>
-                <p style="padding: 0 80px; font-size: 18px;color: gray;  ">only user can login here</p>
+    <section class="header">
+        <nav>
+            <span><img class="img" src="/image/25694.png" alt="homeicon"><h1>GetYourPg.com</h1></span>
+
+            <ul>
+                <li><a href="/index.html">home</a></li>
+                <li><a href="/member.html">member</a></li>
+                <li><a href="/member.html">back</a></li>
+            </ul>
+    
+        </nav>
+    </section>
+
+    <div class="container">
+        <div class="box-1">
+            <div class="div">if you are a member of us you can login here for getting your uploaded details </div><br>
+            <form action="#" class="form-1">
+                 <input class="input" type="password" name="password" placeholder=" Enter password" required>
+                <input type="submit" class="ip-btn">
             </form>
         </div>
-
-    </section>
+        <div class="box-2"></div>
+    </div>
+    
 </body>
+</html>
