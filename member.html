@@ -4,85 +4,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login with GetYourPg.com</title>
-    <style>*{
-        font-family: sans-serif;
-        padding: 0;
-        margin: 0;
-    }
-   
-        .registration-form{
+    <title>member with GetYourPg.com</title>
+    <script src="/javascript.js"></script>
+    <style>
+         *{  font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        .header{
             width: 100%;
-            height: 100vh;
-            background-color:#e5e5e5;
-            display: flex;
-            justify-content: center;
-            align-items:  center;
-            background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url(/image/goldenroom.jpg);
-            background-size: cover;
+            min-height: auto;
+            background-color: rgba(128, 128, 128, 0.233);            
+            justify-content: space-between;
         }
-       .header{
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        nav span{
+            display: flex;
+        }
+        .img{
+            width:60px;
+            padding: 0 12px;
+            margin-left: 2%;
+        }
+        h1{
+            padding: 12px 0;
+            font-size: 32px;
+        }
+        ul {
+           padding: 12px;
            position: absolute;
-           display: flex;
-           margin: 2% 3%;
-       }a
-        {   text-decoration: none;
-            color: black;
-            display: flex;
+           padding-left: 10em;
+           
+               
+        }
+        li{
+            display: inline-block;
+            padding: 12px; 
+            list-style: none;
          }
-       p{
-           font-size: 2em;padding: 0 20px;
-       }
-        .container{
-            box-sizing: border-box;
-            border: 1px solid orangered;
-            width: 400px;
-            height: 380px;
-            border-radius: 14px;
-            box-shadow: 0 0 20px  0px rgb(0, 0, 0);
-            background-color: #f1f5f9;
-            opacity: 0.8;
-        }
-        form{
-            display: grid;
-            margin: 15% 5%;
-        
-        }
-        input{
-            padding: 5px;
-            margin-bottom: 25px;
-            font-size: 18px;
-            outline: none;
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-            color: #1f2937;
-            background: transparent;
-            border-bottom-color:orangered ;
-        }
-        button{
-            padding: 5px 5px;
-            margin: 5% 15%;
-            border-radius: 12px;
-            font-size: 18px;
-            border-color:orangered;
-        }
+         ul li a{
+             text-decoration: none;
+             text-transform: uppercase;
+             color: black;
+             border-bottom: 0;
+            }
+            ul li a:hover{
+                border-bottom: 100%;
+                border: 2px solid orangered;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+            } 
+         .menu{
+           display: none;
+         }
+         @media(max-width:700px){
+            span{
+                 display: inline-flex;
+             }
+             .img{
+                width: 60px;
+             }
+             h1{
+                 font-size:2em;
+                 padding-top: 0.5em;
+
+             }
+             .nav-links{
+                position: absolute;
+                background:#e4e4e7;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: center;
+                z-index: 2;
+                transition: 1s;
+                        
+             }
+             .fa{
+                    display: block;
+                    color: #fff;
+                    margin: 10px;
+                    cursor: pointer;
+                    font-size: 22px;
+
+                }
+            .nav-links ul {
+                padding: 30px;
+                margin-top: 20px;
+            }
+            .menu{
+                padding-top: 15px;
+                width: 25px;
+                display: inline;
+            }
+            .container{
+             border: 1px solid black;
+             max-width: 100%;
+             height: 600px;
+             margin: 25px;
+             box-sizing: border-box;
+             box-shadow: 0px 0px 10px 0px rgb(0, 0,0);
+         }
+         }
+
+         /* -------------------------------member-form-------------------------------- */
+         .container{
+             background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)) ,url(/image/whiteroom.jpg);
+             background-position: center;
+             background-size: cover;
+             border: 1px solid black;
+             max-width: 100%;
+             height: 600px;
+             margin: 30px 40px;
+              box-sizing: border-box;
+             box-shadow: 0px 0px 10px 0px rgb(0, 0,0);
+         }
+         .detail{
+            display: flex;
+            margin:  auto;
+         }
+         .name{
+             margin-top: 45px;
+             width: 50%;
+             height: 400px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+         .form{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-left: 50px;
+             margin-top:50px ;
+             border: 1px solid black;
+             width: 400px;
+             box-sizing: border-box;
+             background-color: #e4e4e7;
+             opacity: 0.8;
+         }
+         .form input{
+             border-top: 0;
+             border-right: 0;
+             border-left: 0;
+             padding: 10px;
+             width: 300px;
+             margin: 15px 10px 15px 40px;
+             outline: none;
+         }
+         .button{
+            
+             text-transform: uppercase;
+             border-color: black;
+             border-radius: 10px;
+             cursor: pointer;
+             padding: 0 12px ;
+             font-weight: 300;
+             background-color:rgba(255, 68, 0, 0.939);
+         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="/index.html"><p>&#8592</p><h1 style="font-size: 32px;">back</h1></a>
-        
-    </div>
-    <section class="registration-form">
-        <div class="container">
-            <form action="">
-                <input type="text" name="name" id="" placeholder="Username" required>
-                <input type="email" name="email" id="" placeholder="email" required >
-                <button type="submit">login</button>
-                <p style="padding: 0 80px; font-size: 18px;color: gray;  ">only user can login here</p>
-            </form>
+    <section class="header">
+        <nav>
+            <span><img class="img" src="/image/25694.png" alt="homeicon"><h1>GetYourPg.com</h1></span>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/index.html">home</a></li>
+                <li><a href="/member.html">member</a></li>
+                <li><a href="/memberlogin.html">Login</a></li>
+            </ul>
         </div>
-
+        <i class="fa fa-bars" onclick="showMenu()"><img class="menu" src="/image/openmenu.webp" alt=""></i>
+        </nav>
     </section>
+
+    <div class="container">
+        <div class="detail">
+            <div class="name">
+                <img src="/image/house-icon.png" style="width:70px; height: 60px;">
+                <h1  style="font-size: 40px;">GetYourPg.com </h1>
+                
+            </div>
+            <div class="form">
+                <form action="/index.html">
+                     <input type="text" placeholder="Useraname" name="" required id="mem-name"><br>
+                     <small style="margin: 0 30px;position: absolute; padding: 0 20px;">Name Hotel Hostel Lodge</small><br>
+                     <input type="tel" placeholder="Mobile" required><br>
+                     <input type="text" placeholder="Address" required><br>
+                     <input type="email" placeholder="Email address"><br>
+                     <input type="file" required><br><small style="margin: 0 40px;position:absolute; padding: 0 20px;">room image uplaod here</small><br>
+                     <input type="submit" value="submit" class="button" onclick="hello()">
+                    <input type="reset" style="background-color: orangered;border-radius: 10px;">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+ <script>
+        var navLinks=document.getElementById("navLinks");
+        var ip=document.getElementById
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+        function input(){
+            window.alert("hello");
+        }
+    </script>
 </body>
+</html>
+
