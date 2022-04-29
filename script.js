@@ -23,9 +23,7 @@ function memberLogin(){
     if(memberName!=0 && memberAddress!=0 ){
             alert("your detail will soon display here ");
     }
-    if(memberMObileNumber==8 && memberImage==ture ){
-        alert("faild")
-    }
+  
     else
     {
         alert("failed");
