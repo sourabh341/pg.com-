@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>member with GetYourPg.com</title>
-    <script src="/javascript.js"></script>
+    <script src="/script.js"></script>
     <style>
          *{  font-family: sans-serif;
             padding: 0;
@@ -199,19 +199,41 @@
             </div>
             <div class="form">
                 <form action="/index.html">
-                     <input type="text" placeholder="Useraname" name="" required id="mem-name"><br>
+                     <input type="text" placeholder="Useraname" name="" required id="mem-name" ><br>
                      <small style="margin: 0 30px;position: absolute; padding: 0 20px;">Name Hotel Hostel Lodge</small><br>
-                     <input type="tel" placeholder="Mobile" required><br>
+                     <input type="tel" placeholder="Mobile" required id="mem_mobile_number"><br>
                      <input type="text" placeholder="Address" required><br>
-                     <input type="email" placeholder="Email address"><br>
-                     <input type="file" required><br><small style="margin: 0 40px;position:absolute; padding: 0 20px;">room image uplaod here</small><br>
-                     <input type="submit" value="submit" class="button" onclick="hello()">
+                     <input type="email" placeholder="Email address" id="member_address"><br>
+                     <input type="file" required id="room_img"><br><small style="margin: 0 40px;position:absolute; padding: 0 20px;">room image uplaod here</small><br>
+                     <input type="submit" value="submit" class="button" onclick="memberLogin()">
                     <input type="reset" style="background-color: orangered;border-radius: 10px;">
                 </form>
             </div>
         </div>
     </div>
+<!-- <script>
+    function memberLogin(){
+        var memberName = document.getElementById("mem-name").value;
+        var memberMObileNumber = document.getElementById("mem_mobile_number").value;
+        var memberAddress = document.getElementById("member_address").value;
+        var memberImage = document.getElementById("room_img").value;
+        if(memberName!=0 && memberAddress!=0 ){
+                alert("your detail will soon display here ");
+        }
+        if(memberMObileNumber==8 && memberImage==ture ){
+            alert("faild")
+        }
+        else
+        {
+            alert("failed");
+        }
+        
+    }    
 
+
+
+
+</script> -->
 
  <script>
         var navLinks=document.getElementById("navLinks");
