@@ -21,7 +21,7 @@ function memberLogin(){
     var memberAddress = document.getElementById("member_address").value;
     var memberImage = document.getElementById("room_img").value;
     if(memberName!=0 && memberAddress!=0 ){
-            alert("your detail will soon display here ");
+            alert("your detail will soon display on home page ");
     }
   
     else
