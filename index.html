@@ -125,29 +125,6 @@
              
          }
 
-         .container{
-            border: 1px solid #e5e5e5;
-            max-width: 100vw;
-            height: auto;
-            margin: 20px;
-            box-shadow: 0 0 10px  0px rgb(0, 0, 0);      
-       } 
-       .row{
-            display:grid;
-       }
-       .res-details{
-           border: 1px solid #e4e4e7;
-           max-width: 380px;
-           min-height: auto;
-           margin: 12PX auto; 
-           box-sizing: border-box;;
-       }
-       .res-details:hover{
-        box-shadow: 0 0 15px  0px rgb(0, 0, 0); 
-       }
-       img{
-           width: 380px;
-       }
        .colum{
             width: 0px;
             height: 0px;
@@ -197,38 +174,55 @@
              
          }
  /* ----------------------------------residence-details-------------------------------- */
-       .container{
-            border: 1px solid #e5e5e5;
-            max-width: 100vw;
-            height: auto;
-            margin: 20px;
-            box-shadow: 0 0 10px  0px rgb(0, 0, 0);      
-       } 
-       .row{
+        .container{
+            border: 1px solid black;
+            width: 91.5%;
+            min-height:auto;
+            margin: 5% 5%;
+            box-shadow: 0 0 10px  0px rgb(0, 0, 0);
+          }
+        .img-room{
+
+            width: 380px;
+            height: 250px;
+        }
+        .div{
+            
+            border: 1px solid black;
+            width: 380px;
+            margin: 2% 2%;
+            height:500px;
+        }
+        .text-name{
+            padding: 0  15px;
+            margin: 10px 5px;
+            font-size: 28px;
+            padding: 5px;
+        }
+        .text{
+            padding: 0  15px;
+            margin: 2px;
+            font-size: 18px;
+        }
+        .row{
             display: flex;
-       }
-       .row2{
-            display: flex;
-       }
-       .row3{
-            display: flex;
-       }
-       .row4{
-            display: flex;
-       }
-       .res-details{
-           border: 1px solid #e4e4e7;
-           max-width: 380px;
-           min-height: auto;
-           margin: 12PX auto; 
-           box-sizing: border-box;;
-       }
-       .res-details:hover{
-        box-shadow: 0 0 15px  0px rgb(0, 0, 0); 
-       }
-       img{
-           width: 380px;
-       }
+        }
+        .img-rm-area{
+            width: 380px;
+            height: 250px;
+        }
+       
+        @media(max-width:700px){
+            .row{
+                display: grid;
+            }
+            .div{
+                border: 1px solid black;
+                width: 380px;
+                margin: 2% 8%;
+                height:500px;
+        }
+        }
     </style>
 </head>
 <body >
@@ -247,201 +241,178 @@
         </nav>
     </section>
     
-    <div class="search-bar">
-        <div class="colum">Advertisement...</div>
-
-        <form action="#" class="form">
-            <input type="search" name="input" placeholder="search location" class="input">
-            <input type="submit" name="" class="button" value="submit" onclick="hello()">
-        </form>
-        <div class="colum">Advertisement...</div>
-
-    </div>
+   
         
     <!-- /* ----------------------------------residence-details-------------------------------- */ -->
+    <div class="container">    
 
-
-    <section class="container">
-        
-            <div class="row">
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/blueroom.jpg" alt="room  image">
-                    </div>
-                    <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9  2000</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/goldenroom.jpg" alt="room  image">
-                    </div>
-                    <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 4000</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/whiteroom.jpg" alt="room  image">
-                    </div>                    
-                    <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 1500</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/blueroom.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel </b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
             </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/goldenroom.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/whiteroom.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+        </div>               
+        <div class="row">
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/whiteroom2.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/goldenroom.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/blueroom.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+        </div>                
+        <div class="row">
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/whiteroom.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/whiteroom2.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/blueroom.jpg" alt="room image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+        </div>        
+        <div class="row">
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/whiteroom.jpg" alt="room  image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/blueroom.jpg" alt="room  image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+            <div class="div">
+                <span class="img-rm-area">
+                    <img src="/image/whiteroom.jpg" alt="room  image"  class="img-room">
+                </span> 
+                <div>
+                    <div class="text-name"><b>The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
+                    <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; padding: 15px;"></div>
+               </div>
+           
+            </div>
+        </div>        
+     </div>
 
-             <div class="row2">
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/whiteroom.jpg" alt="room  image">
-                    </div>                   
-                     <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 500</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/blueroom.jpg" alt="room  image">
-                    </div>                    
-                    <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 2000</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/goldenroom.jpg" alt="room  image">
-                    </div>                   
-                     <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 4500</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-             </div>
-
-             <div class="row3">
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/blueroom.jpg" alt="room  image">
-                    </div>                   
-                     <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 600</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/whiteroom.jpg" alt="room  image">
-                    </div>                    
-                    <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 2500</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/goldenroom.jpg" alt="room  image">
-                    </div>                   
-                     <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 3500</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-             </div>
-
-             <div class="row4">
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/goldenroom.jpg" alt="room  image">
-                    </div>                    
-                    <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 6000</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/blueroom.jpg" alt="room  image">
-                    </div>                   
-                     <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 1500</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="res-details">
-                    <div style=" margin: 0; padding: 0; height: 60%;">
-                        <img src="/image/whiteroom.jpg" alt="room  image">
-                    </div>                    <div style="display:grid; margin: 12px;"> 
-                        <span style="font-size: 22px; padding-bottom: 0;" id="m-name">owner/house/hotel/loudgename</span>
-                        <span style="font-size: 15px;">address  here</span>
-                        <span  style="padding: 10px;"><img src="/image/wifi.png" style="width: 50px;"></span>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span style="padding: 10px; color: red;">&#x20B9 1200</span>
-                            <span><a href=""><img src="/image/call.jpg" style="width: 50px;"></a></span>
-                        </div>
-                    </div>
-                </div>
-             </div>
-    </section> 
+   
   
   
   <script>
