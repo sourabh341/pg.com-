@@ -1,6 +1,58 @@
-function hello(){
-    alert("not available");
-}
+window.addEventListener('load',()=>{
+    const params = (new URL(document.location)).searchParams;
+    const naam=params.get('ownername');
+    const mobileno=params.get('ownernumber');
+    const ownerpath=params.get('address');
+    const minrent=params.get('roomrent');
+    document.getElementById('username').innerHTML=naam;
+    document.getElementById('address').innerHTML=ownerpath;
+    document.getElementById('number').innerHTML=mobileno;
+    document.getElementById('rent').innerHTML=minrent;
+ 
+
+})
+
+const image_input= document.querySelector("image_input");
+var uploaded_image="";
+
+image_input.addEventListener('change',function(){
+    const reader=new FileReader();
+    reader.addEventListener('load',() =>{
+        uploaded_image = reader.result;
+        document.querySelector("#display_image").getElementsByClassName.backgroundImage='url(${uploaded_image})'
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function login(){
   
@@ -15,20 +67,8 @@ function login(){
     }
     
 }
-function memberLogin(){
-    var memberName = document.getElementById("mem-name").value;
-    var memberMObileNumber = document.getElementById("mem_mobile_number").value;
-    var memberAddress = document.getElementById("member_address").value;
-    var memberImage = document.getElementById("room_img").value;
-    if(memberName!=0 && memberAddress!=0 ){
-            alert("your detail will soon display on home page ");
-    }
-  
-    else
-    {
-        alert("failed");
-    }
-    
-} 
+
+
+
 
 

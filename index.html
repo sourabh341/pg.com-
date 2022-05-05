@@ -117,12 +117,21 @@
             width: 380px;
             height: 250px;
         }
-        .div{
-            
+        .div-1{
             border: 1px solid black;
             width: 380px;
             margin: 2% 2%;
             height:470px;
+        }
+        .div{
+            
+            border: 1px solid rgba(0, 0, 0, 0.322);
+            width: 380px;
+            margin: 2% 2%;
+            height:470px;
+        }
+        .div:hover{
+            box-shadow: 0px 0px 10px 0px rgb(0, 0,0);
         }
         .text-name{
             padding: 0  15px;
@@ -139,6 +148,7 @@
             display: flex;
         }
         .img-rm-area{
+            
             width: 380px;
             height: 250px;
         }
@@ -155,11 +165,18 @@
                 display: grid;
                 margin: 0 5px 0 0;
             }
-            .div{
+            .div-1{
                 border: 1px solid black;
                 width: 300px;
                 margin: 8px 0 15px 10px ;
                 height:430px;
+             }
+            .div{
+                border: 1px solid rgba(0, 0, 0, 0.226);
+                width: 300px;
+                margin: 8px 0 15px 10px ;
+                height:430px;
+                box-shadow: 0px 0px 10px 0px rgb(0, 0,0);
              }
             .img-room{
                 width: 300px;
@@ -180,6 +197,12 @@
                 width: 325px;
                 margin: 5% 0 5% 10%;
             }
+            .div-1{
+                border: 1px solid black;
+                width: 200px;
+                margin: 8px 0 15px 10px ;
+                height:430px;
+            }
         }
     </style>
 </head>
@@ -198,6 +221,7 @@
         <i class="fa fa-bars" onclick="showMenu()"><img class="menu" src="/image/openmenu.webp" alt=""></i>
         </nav>
     </section>
+
     
    
         
@@ -207,12 +231,12 @@
         <div class="row">
             <div class="div">
                 <span class="img-rm-area">
-                    <img src="/image/blueroom.jpg" alt="room image"  class="img-room">
+                    <img  id='display_image'src="/image/goldenroom.jpg" alt="room image"  class="img-room">
                 </span> 
                 <div>
-                    <div class="text-name"><b>The Park Hotel </b></div>
-                    <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
-                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div class="text-name"><b id="username">The Park Hotel</b></div>
+                    <div class="text" style="color: rgba(128, 128, 128, 0.925);" id="address">Vigay nager AB road indore</div>
+                    <div  class="text"> contact no. <a href="" id="number" style="text-decoration: none;  color: black" >4563217089</a></div>
                     <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
                     <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; "></div>
                </div>
@@ -225,7 +249,7 @@
                 <div>
                     <div class="text-name"><b>The Park Hotel</b></div>
                     <div class="text" style="color: rgba(128, 128, 128, 0.925);">Vigay nager AB road indore</div>
-                    <div  class="text"> contact no. <a href="" id="" style="text-decoration: none;  color: black">4563217089</a></div>
+                    <div  class="text"> contact no. <a href="" id="number" style="text-decoration: none;  color: black">4563217089</a></div>
                     <div class="text" style="padding: 15px 15px;">&#x20B9 <b id="rent">400</b></div>
                     <div class="img"><img src="/image/wifi.png"  alt="parking image" style="height: 40px;  width: 80px; "></div>
                </div>
@@ -385,6 +409,17 @@
         function input(){
             window.alert("hello");
         }
+
+        const image_input= document.querySelector("image_input");
+        var uploaded_image="";
+
+        image_input.addEventListener('change',function(){
+            const reader=new FileReader();
+            reader.addEventListener('load',() =>{
+                uploaded_image = reader.result;
+                document.querySelector("#display_image").getElementsByClassName.backgroundImage='url(${uploaded_image})'
+            })
+        })
     </script>
 </body>
 </html>
